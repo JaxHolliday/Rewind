@@ -15,10 +15,26 @@ function getValues(){
 //logic function
 function reverseString(userString){
 
+    let revString = [];
+
+    //reverse string in a for loop
+    for (let i = userString.length - 1; i >= 0; i--) {
+        //revString adds to itself for every loop iteration 
+        revString += userString[i];        
+    }
+
+    return revString;
+
 }
 
 //display the results
 //view function
-function displayString(){
+function displayString(revString){
+
+    // write to the page 
+    document.getElementById("message").innerHTML = `Your string reversed is: ${revString}`;
+    //show alert box
+    document.getElementById("alert").classList.remove("invisible");
+
 
 }
